@@ -1,7 +1,8 @@
+<style src="./lightbox.scss"></style>
+
 <template>
-    <div>
-        {{ url }}
-    </div>
+  <div class="lightbox">
+  </div>
 </template>
 
 <script>
