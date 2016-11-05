@@ -1,28 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <a href="http://lorempicsum.com/simpsons/800/600/1" v-lightbox>
+      <img src="http://lorempicsum.com/simpsons/150/150/1">
+    </a>
+    <Lightbox></Lightbox>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Lightbox from './components/lightbox/Lightbox.vue'
 
 export default {
-  name: 'app',
   components: {
-    Hello
+    Lightbox
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
