@@ -1,7 +1,8 @@
 <style src="./lightbox.scss" lang="scss"></style>
 
 <template>
-  <div class="lightbox">
+  <div class="lightbox" v-if="image">
+    <img :src="image">
   </div>
 </template>
 
@@ -16,8 +17,10 @@ export default {
     }
   },
   computed: {
-    url () {
-      return this.state.image
+    image () {
+      if (this.state.index !== false) {
+        return this.state.images[this.state.index]
+      }
     }
   }
 }
