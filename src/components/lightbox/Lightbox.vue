@@ -1,4 +1,4 @@
-<style src="./lightbox.scss"></style>
+<style src="./lightbox.scss" lang="scss"></style>
 
 <template>
   <div class="lightbox">
