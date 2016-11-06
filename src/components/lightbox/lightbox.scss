@@ -28,6 +28,25 @@
     }
 }
 
+.lightbox__btn {
+    position: fixed;
+    top: 50%;
+    width: 63px;
+    height: 63px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.lightbox__next {
+    right: 20px;
+    background: url(./assets/next.png) transparent no-repeat;
+}
+
+.lightbox__prev {
+    left: 20px;
+    background: url(./assets/prev.png) transparent no-repeat;
+}
+
 .lightbox__loading {
     position: fixed;
     top: 50%;

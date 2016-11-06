@@ -4,6 +4,8 @@
   <div class="lightbox" v-if="image" @click="closed">
     <LightboxImage :image="image"></LightboxImage>
     <div class="lightbox__close" @click="closed"></div>
+    <div class="lightbox__btn lightbox__next" @click.stop.prevent="next"></div>
+    <div class="lightbox__btn lightbox__prev" @click.stop.prevent="prev"></div>
   </div>
 </template>
 
@@ -22,7 +24,9 @@ export default {
     }
   },
   methods: {
-    closed () { store.closed() }
+    closed () { store.closed() },
+    next () { store.next() },
+    prev () { store.prev() }
   },
   computed: {
     image () {

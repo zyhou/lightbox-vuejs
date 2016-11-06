@@ -20,6 +20,14 @@ class LightboxStore {
     this.state.index = false
   }
 
+  next () {
+    this.state.index = this.state.index + 1 < this.props.images.length ? this.state.index + 1 : 0
+  }
+
+  prev () {
+    this.state.index = this.state.index - 1 < 0 ? this.props.images.length - 1 : this.state.index - 1
+  }
+
 }
 
 export default new LightboxStore()
