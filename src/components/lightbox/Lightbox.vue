@@ -2,7 +2,9 @@
 
 <template>
   <div class="lightbox" v-if="image" @click="closed">
-    <LightboxImage :image="image"></LightboxImage>
+    <transition name="lightbox-fade">
+      <LightboxImage :image="image" :key="image"></LightboxImage>
+    </transition>
     <div class="lightbox__close" @click="closed"></div>
     <div class="lightbox__btn lightbox__next" @click.stop.prevent="next"></div>
     <div class="lightbox__btn lightbox__prev" @click.stop.prevent="prev"></div>
