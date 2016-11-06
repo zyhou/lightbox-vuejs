@@ -44,7 +44,7 @@ export default {
       }
     },
     transition () {
-      return 'lightbox-' + this.transation
+      return 'lightbox-' + this.direction
     }
   }
 }

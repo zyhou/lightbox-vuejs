@@ -100,7 +100,7 @@
     transform: translateX(-100px);
 }
 
-.lightbox-prev-leave {
+.lightbox-prev-leave-active {
     opacity: 0;
     transform: translateX(100px);
 }
@@ -124,7 +124,7 @@
     transform: translateX(100px);
 }
 
-.lightbox-next-leave {
+.lightbox-next-leave-active {
     opacity: 0;
     transform: translateX(-100px);
 }
