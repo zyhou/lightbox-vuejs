@@ -2,7 +2,7 @@
 
 <template>
   <div class="lightbox" v-if="image" @click="closed">
-    <transition name="lightbox-fade">
+    <transition :name="transition">
       <LightboxImage :image="image" :key="image"></LightboxImage>
     </transition>
     <div class="lightbox__close" @click="closed"></div>
@@ -22,19 +22,29 @@ export default {
   },
   data () {
     return {
-      state: store.state
+      state: store.state,
+      direction: 'next'
     }
   },
   methods: {
     closed () { store.closed() },
-    next () { store.next() },
-    prev () { store.prev() }
+    next () {
+      this.direction = 'next'
+      store.next()
+    },
+    prev () {
+      this.direction = 'prev'
+      store.prev()
+    }
   },
   computed: {
     image () {
       if (this.state.index !== false) {
         return this.state.images[this.state.index]
       }
+    },
+    transition () {
+      return 'lightbox-' + this.transation
     }
   }
 }

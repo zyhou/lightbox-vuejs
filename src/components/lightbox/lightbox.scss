@@ -79,6 +79,57 @@
     opacity: 0;
 }
 
+
+
+.lightbox-prev-enter-active, .lightbox-prev-leave-active {
+    // Pour le loader faut rajouter la position fixed
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.lightbox-prev-enter-active {
+    transition-delay: 0.3s;
+}
+
+.lightbox-prev-enter {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.lightbox-prev-leave {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.lightbox-next-enter-active, .lightbox-next-leave-active {
+    // Pour le loader faut rajouter la position fixed
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.lightbox-next-enter-active {
+    transition-delay: 0.3s;
+}
+
+.lightbox-next-enter {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.lightbox-next-leave {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+
 @keyframes lighbox-loading {
     0% {
         opacity: 0.5;
