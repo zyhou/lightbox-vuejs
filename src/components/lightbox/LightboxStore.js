@@ -21,11 +21,11 @@ class LightboxStore {
   }
 
   next () {
-    this.state.index = this.state.index + 1 < this.props.images.length ? this.state.index + 1 : 0
+    this.state.index = this.state.index + 1 < this.state.images.length ? this.state.index + 1 : 0
   }
 
   prev () {
-    this.state.index = this.state.index - 1 < 0 ? this.props.images.length - 1 : this.state.index - 1
+    this.state.index = this.state.index - 1 < 0 ? this.state.images.length - 1 : this.state.index - 1
   }
 
 }
