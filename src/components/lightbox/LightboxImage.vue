@@ -55,9 +55,13 @@ export default {
     }
 
     image.src = this.image
-    window.addEventListener('resize', () => {
+    this.resizeEvent = () => {
       this.resizeImage(image)
-    })
+    }
+    window.addEventListener('resize', this.resizeEvent)
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.resizeEvent)
   }
 }
 </script>
