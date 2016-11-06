@@ -9,7 +9,7 @@ class LightboxStore {
   }
 
   addImage (url) {
-    return this.state.images.push(url)
+    return this.state.images.push(url) - 1
   }
 
   open (index) {

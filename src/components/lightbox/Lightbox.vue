@@ -23,7 +23,7 @@ export default {
   computed: {
     image () {
       if (this.state.index !== false) {
-        return this.state.images[this.state.index - 1]
+        return this.state.images[this.state.index]
       }
     }
   }
