@@ -19,11 +19,9 @@ export default {
   },
   mounted () {
     let image = new window.Image()
-    console.log('oui')
     image.onload = _ => {
       this.loading = false
       this.src = this.image
-      console.log('oui')
 
       let width = image.width
       let height = image.height
@@ -48,6 +46,8 @@ export default {
         left: ((window.innerWidth - width) * 0.5) + 'px'
       }
     }
+
+    image.src = this.image
   }
 }
 </script>
