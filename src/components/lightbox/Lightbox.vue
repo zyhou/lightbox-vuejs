@@ -2,7 +2,8 @@
 
 <template>
   <div class="lightbox" v-if="image" @click="closed">
-    <lightbox-image :image="image"></lightbox-image>
+    <LightboxImage :image="image"></LightboxImage>
+    <div class="lightbox__close" @click="closed"></div>
   </div>
 </template>
 
