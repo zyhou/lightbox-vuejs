@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="loading">Chargement...</div>
-        <img :src="src" class="lightbox__image">
+        <img :src="src" class="lightbox__image" :style="style">
     </div>
 </template>
 
@@ -17,12 +17,8 @@ export default {
       style: {}
     }
   },
-  mounted () {
-    let image = new window.Image()
-    image.onload = _ => {
-      this.loading = false
-      this.src = this.image
-
+  methods: {
+    resizeImage (image) {
       let width = image.width
       let height = image.height
 
@@ -46,8 +42,20 @@ export default {
         left: ((window.innerWidth - width) * 0.5) + 'px'
       }
     }
+  },
+  mounted () {
+    let image = new window.Image()
+
+    image.onload = _ => {
+      this.loading = false
+      this.src = this.image
+      this.resizeImage(image)
+    }
 
     image.src = this.image
+    window.addEventListener('resize', () => {
+      this.resizeImage(image)
+    })
   }
 }
 </script>
