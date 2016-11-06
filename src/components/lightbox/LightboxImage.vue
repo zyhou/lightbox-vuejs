@@ -1,7 +1,9 @@
 <template>
     <div @click.stop>
         <div v-if="loading" class="lightbox__loading"></div>
-        <img :src="src" class="lightbox__image" :style="style">
+        <transition name="lightbox-fade">
+          <img :src="src" class="lightbox__image" :style="style" :key="src">
+        </transition>
     </div>
 </template>
 

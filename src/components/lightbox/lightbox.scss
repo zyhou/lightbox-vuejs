@@ -52,6 +52,14 @@
     }
 }
 
+.lightbox-fade-enter-active, .lightbox-fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.lightbox-fade-enter, .lightbox-fade-leave-active {
+    opacity: 0;
+}
+
 @keyframes lighbox-loading {
     0% {
         opacity: 0.5;
