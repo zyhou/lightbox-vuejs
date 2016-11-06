@@ -21,11 +21,6 @@
     height: 50px;
     background: url(./assets/cross.png) transparent no-repeat;
     transition: transform 0.3s;
-
-    &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-    }
 }
 
 .lightbox__btn {
@@ -34,6 +29,11 @@
     width: 63px;
     height: 63px;
     margin-top: -40px;
+    transition: transform 0.3s;
+}
+
+.lightbox__close:hover, .lightbox__btn:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
 
