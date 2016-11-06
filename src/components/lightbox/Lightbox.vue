@@ -1,7 +1,7 @@
 <style src="./lightbox.scss" lang="scss"></style>
 
 <template>
-  <div class="lightbox" v-if="image">
+  <div class="lightbox" v-if="image" @click="closed">
     <lightbox-image :image="image"></lightbox-image>
   </div>
 </template>
@@ -19,6 +19,9 @@ export default {
     return {
       state: store.state
     }
+  },
+  methods: {
+    closed () { store.closed() }
   },
   computed: {
     image () {
